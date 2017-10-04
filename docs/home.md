@@ -1,0 +1,1 @@
+# Scrabbler documentation
