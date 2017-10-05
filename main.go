@@ -1,10 +1,11 @@
-package main // import "github.com/hashicorp/vault"
+package main
 
 import (
-	"github.com/AKovalevich/scrabbler/cli"
 	"os"
+
+	"github.com/AKovalevich/scrabbler/cmd/scrabbler"
 )
 
 func main() {
-	os.Exit(cli.Run())
+	os.Exit(scrabbler.Run(os.Args[1:]))
 }
