@@ -48,15 +48,12 @@ func Run(args []string) int {
 
 	//run test
 	if err := f.Run(); err != nil {
-		log.Error("Running error", log.String("error", err.Error()))
+		log.Error("Running error", err.Error())
 	}
 	return 1
 }
 
 // start scrabbler application
 func start(config *config.ScrabblerConfiguration) {
-	//log.Info("Scrabbler started",
-	//	log.String("Log level", config.LogLevel),
-	//	log.Bool("Debug", config.Debug),
-	//)
+	log.Infof("Scrabbler started")
 }

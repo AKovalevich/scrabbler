@@ -1,107 +1,161 @@
 package log
 
 import (
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
+``	"io"
+	"os"
+
+	"github.com/Sirupsen/logrus"
 )
 
 var (
-	loger *zap.Logger
+	logger	*logrus.Entry
 )
 
-func Initialize(logLevel string) {
-	var realInfoLevel zapcore.Level
+func init() {
+	logger = logrus.StandardLogger().WithFields(logrus.Fields{})
+	logrus.SetOutput(os.Stdout)
+}
 
-	switch logLevel {
-	case zapcore.DebugLevel.String():
-		realInfoLevel = zapcore.DebugLevel
-		break
-	case zapcore.InfoLevel.String():
-		realInfoLevel = zapcore.InfoLevel
-		break
-	case zapcore.WarnLevel.String():
-		realInfoLevel = zapcore.WarnLevel
-		break
-	case zapcore.ErrorLevel.String():
-		realInfoLevel = zapcore.ErrorLevel
-		break
-	case zapcore.DPanicLevel.String():
-		realInfoLevel = zapcore.DPanicLevel
-		break
-	case zapcore.PanicLevel.String():
-		realInfoLevel = zapcore.PanicLevel
-		break
-	case zapcore.FatalLevel.String():
-		realInfoLevel = zapcore.FatalLevel
-		break
-	default:
-		realInfoLevel = zapcore.WarnLevel
+func Context(context interface{}) *logrus.Entry {
+	return logger.WithField("context", context)
+}
+
+func SetOutput(out io.Writer) {
+	logrus.SetOutput(out)
+}
+
+func SetFormatter(formatter logrus.Formatter) {
+	logrus.SetFormatter(formatter)
+}
+
+func SetLevel(level string) {
+	lvl, err := logrus.ParseLevel(level)
+	if err != nil {
+		return
 	}
-
-	encoderConfig := zapcore.EncoderConfig{
-		// Keys can be anything except the empty string.
-		TimeKey:        "T",
-		LevelKey:       "L",
-		NameKey:        "N",
-		CallerKey:      "C",
-		MessageKey:     "M",
-		StacktraceKey:  "S",
-		LineEnding:     zapcore.DefaultLineEnding,
-		EncodeLevel:    zapcore.CapitalColorLevelEncoder,
-		EncodeTime:     zapcore.ISO8601TimeEncoder,
-		EncodeDuration: zapcore.StringDurationEncoder,
-		EncodeCaller:   zapcore.FullCallerEncoder,
-	}
-
-	config := zap.Config{
-			Level:       zap.NewAtomicLevelAt(realInfoLevel),
-			Development: false,
-			Sampling: &zap.SamplingConfig{
-				Initial:    100,
-				Thereafter: 100,
-			},
-			Encoding:         "console",
-			EncoderConfig:    encoderConfig,
-			OutputPaths:      []string{"stderr"},
-			ErrorOutputPaths: []string{"stderr"},
-	}
-
-	loger, _ = config.Build()
-	defer loger.Sync()
+	logrus.SetLevel(lvl)
 }
 
-func Info(msg string, fields ...zapcore.Field) {
-	loger.Info(msg, fields...)
+func GetLevel() logrus.Level {
+	return logrus.GetLevel()
 }
 
-func Debug(msg string, fields ...zapcore.Field) {
-	loger.Debug(msg, fields...)
+func AddHook(hook logrus.Hook) {
+	logrus.AddHook(hook)
 }
 
-func Warn(msg string, fields ...zapcore.Field) {
-	loger.Warn(msg, fields...)
+func WithError(err error) *logrus.Entry {
+	return logger.WithError(err)
 }
 
-func Error(msg string, fields ...zapcore.Field) {
-	loger.Error(msg, fields...)
+func WithField(key string, value interface{}) *logrus.Entry {
+	return logger.WithField(key, value)
 }
 
-func Panic(msg string, fields ...zapcore.Field) {
-	loger.Panic(msg, fields...)
+func WithFields(fields logrus.Fields) *logrus.Entry {
+	return logger.WithFields(fields)
 }
 
-func Fatal(msg string, fields ...zapcore.Field) {
-	loger.Fatal(msg, fields...)
+func Debug(args ...interface{}) {
+	logger.Debug(args...)
 }
 
-func String(key string, value string) zapcore.Field {
-	return zap.String(key, value)
+func Print(args ...interface{}) {
+	logger.Print(args...)
 }
 
-func Int(key string, val int) zapcore.Field {
-	return zap.Int(key, val)
+func Info(args ...interface{}) {
+	logger.Info(args...)
 }
 
-func Bool(key string, val bool) zapcore.Field {
-	return zap.Bool(key, val)
+func Warn(args ...interface{}) {
+	logger.Warn(args...)
+}
+
+func Warning(args ...interface{}) {
+	logger.Warning(args...)
+}
+
+func Error(args ...interface{}) {
+	logger.Error(args...)
+}
+
+func Panic(args ...interface{}) {
+	logger.Panic(args...)
+}
+
+func Fatal(args ...interface{}) {
+	logger.Fatal(args...)
+}
+
+func Debugf(format string, args ...interface{}) {
+	logger.Debugf(format, args...)
+}
+
+func Printf(format string, args ...interface{}) {
+	logger.Printf(format, args...)
+}
+
+func Infof(format string, args ...interface{}) {
+	logger.Infof(format, args...)
+}
+
+func Warnf(format string, args ...interface{}) {
+	logger.Warnf(format, args...)
+}
+
+func Warningf(format string, args ...interface{}) {
+	logger.Warningf(format, args...)
+}
+
+func Errorf(format string, args ...interface{}) {
+	logger.Errorf(format, args...)
+}
+
+func Panicf(format string, args ...interface{}) {
+	logger.Panicf(format, args...)
+}
+
+func Fatalf(format string, args ...interface{}) {
+	logger.Fatalf(format, args...)
+}
+
+func Debugln(args ...interface{}) {
+	logger.Debugln(args...)
+}
+
+func Println(args ...interface{}) {
+	logger.Println(args...)
+}
+
+func Infoln(args ...interface{}) {
+	logger.Infoln(args...)
+}
+
+func Warnln(args ...interface{}) {
+	logger.Warnln(args...)
+}
+
+func Warningln(args ...interface{}) {
+	logger.Warningln(args...)
+}
+
+func Errorln(args ...interface{}) {
+	logger.Errorln(args...)
+}
+
+func Panicln(args ...interface{}) {
+	logger.Panicln(args...)
+}
+
+func Fatalln(args ...interface{}) {
+	logger.Fatalln(args...)
+}
+
+func Writer() *io.PipeWriter {
+	return WriterLevel(logrus.InfoLevel)
+}
+
+func WriterLevel(level logrus.Level) *io.PipeWriter {
+	return logger.WriterLevel(level)
 }
