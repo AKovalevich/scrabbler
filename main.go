@@ -2,7 +2,6 @@ package main
 
 import (
 	"os"
-
 	"github.com/AKovalevich/scrabbler/cmd/scrabbler"
 )
 

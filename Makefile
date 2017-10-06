@@ -15,13 +15,13 @@ build: vendor test
 	@echo "+ $@"
 	@CGO_ENABLED=0 GOOS=${GOOS} GOARCH=${GOARCH} go build -a -installsuffix cgo \
 		-ldflags "-s -w -X ${PROJECT}/pkg/version.RELEASE=${RELEASE} -X ${PROJECT}/pkg/version.COMMIT=${COMMIT} -X ${PROJECT}/pkg/version.REPO=${REPO_INFO}" \
-		-o bin/${GOOS}-${GOARCH}/${APP} ${PROJECT}/cmd
+		-o bin/${GOOS}-${GOARCH}/${APP} ${PROJECT}/
 	docker build --pull -t $(CONTAINER_IMAGE):$(RELEASE) .
 
 .PHONY: run
 run: build
 	@echo "+ $@"
-	@docker run --name ${CONTAINER_NAME} -p ${K8SAPP_LOCAL_PORT}:${K8SAPP_LOCAL_PORT} \
+	@docker run --name ${CONTAINER_NAME} -p ${SCRABBLER_LOCAL_PORT}:${K8SAPP_LOCAL_PORT} \
 		-e "K8SAPP_LOCAL_HOST=${K8SAPP_LOCAL_HOST}" \
 		-e "K8SAPP_LOCAL_PORT=${K8SAPP_LOCAL_PORT}" \
 		-e "K8SAPP_LOG_LEVEL=${K8SAPP_LOG_LEVEL}" \
@@ -41,12 +41,12 @@ vendor: clean bootstrap
 .PHONY: fmt
 fmt:
 	@echo "+ $@"
-	@go list -f '{{if len .TestGoFiles}}"gofmt -s -l {{.Dir}}"{{end}}' ${GO_LIST_FILES} | xargs -L 1 sh -c
+	@go list -f '{{if len .TestGoFiles}}"gofmt -s -l {{.Dir}}"{{end}}' ${GO_LIST_FILES}
 
 .PHONY: lint
 lint: bootstrap
 	@echo "+ $@"
-	@go list -f '{{if len .TestGoFiles}}"golint -min_confidence=0.85 {{.Dir}}/..."{{end}}' ${GO_LIST_FILES} | xargs -L 1 sh -c
+	@go list -f '{{if len .TestGoFiles}}"golint -min_confidence=0.85 {{.Dir}}/..."{{end}}' ${GO_LIST_FILES}
 
 .PHONY: vet
 vet:
@@ -62,10 +62,9 @@ HAS_LINT := $(shell command -v golint;)
 
 .PHONY: bootstrap
 bootstrap:
-    @echo "Installing Glide and locked dependencies..."
-    ifndef HAS_DEP
-        go get -u -f github.com/golang/dep/cmd/dep
-    endif
-    ifndef HAS_LINT
-        go get -u -f github.com/golang/lint/golint
-    endif
+ifndef HAS_DEP
+    go get -u -f github.com/golang/dep/cmd/dep
+endif
+ifndef HAS_LINT
+    go get -u -f github.com/golang/lint/golint
+endif

@@ -5,22 +5,24 @@ import (
 	"fmt"
 	"os"
 
+	log "github.com/AKovalevich/scrabbler/log/logrus"
 	"github.com/AKovalevich/scrabbler/config"
-	"github.com/AKovalevich/scrabbler/log"
+	"github.com/AKovalevich/scrabbler/server"
 	"github.com/containous/flaeg"
+	"sync"
 )
 
 func Run(args []string) int {
 	runtime.GOMAXPROCS(runtime.NumCPU())
 
 	scrabblerConfiguration := config.NewScrabblerConfiguration()
-	traefikPointersConfiguration := config.NewScrabblerDefaultConfiguration()
+	scrabblerPointersConfiguration := config.NewScrabblerDefaultConfiguration()
 
 	scrabblerCmd := &flaeg.Command{
 		Name:					"scrabbler",
 		Description:			`scrabbler text classification`,
 		Config:					scrabblerConfiguration,
-		DefaultPointersConfig:	traefikPointersConfiguration,
+		DefaultPointersConfig:	scrabblerPointersConfiguration,
 		Run: func() error {
 			start(scrabblerConfiguration)
 			return nil
@@ -29,7 +31,7 @@ func Run(args []string) int {
 
 	healthCheckCmd := &flaeg.Command{
 		Name:					"healthcheck",
-		Description:			`Calls scrabbler /ping to check health (web provider must be enabled)`,
+		Description:			`Calls scrabbler /ping to check health`,
 		Config:					struct{}{},
 		DefaultPointersConfig:	struct{}{},
 		Run: func() error {
@@ -37,7 +39,7 @@ func Run(args []string) int {
 			os.Exit(0)
 			return nil
 		},
-		Metadata: map[string]string{
+		Metadata: map[string]string {
 			"parseAllSources": "true",
 		},
 	}
@@ -46,14 +48,19 @@ func Run(args []string) int {
 	f.AddCommand(healthCheckCmd)
 	f.AddCommand(newVersionCmd())
 
-	//run test
 	if err := f.Run(); err != nil {
-		log.Error("Running error", err.Error())
+		log.Do.Error("Running error: ", err.Error())
 	}
 	return 1
 }
 
-// start scrabbler application
+// Start scrabbler application
 func start(config *config.ScrabblerConfiguration) {
-	log.Infof("Scrabbler started")
+	log.Do.Infof("Scrabbler started")
+	var wg sync.WaitGroup
+	wg.Add(1)
+	go func() {
+		server.Serve()
+	}()
+	wg.Wait()
 }
