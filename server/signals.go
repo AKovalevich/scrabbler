@@ -18,16 +18,16 @@ func (server *Server) listenSignals() {
 		sig := <-server.signals
 		switch sig {
 		case syscall.SIGUSR1:
-
+			log.Do.Infof("Signal: ", sig)
 		default:
 			log.Do.Infof("I have to go... %+v", sig)
-			reqAcceptGraceTimeOut := time.Duration(server.globalConfiguration.LifeCycle.RequestAcceptGraceTimeout)
+			reqAcceptGraceTimeOut := time.Duration(3)
 			if reqAcceptGraceTimeOut > 0 {
-				log.Do.Infof("Waiting %s for incoming requests to cease", reqAcceptGraceTimeOut)
-				time.Sleep(reqAcceptGraceTimeOut)
+				log.Do.Infof("Waiting %s for incoming requests to cease", 3)
+				time.Sleep(3)
 			}
 			log.Do.Info("Stopping server gracefully")
-			server.Stop()
+			//server.Stop()
 		}
 	}
 }

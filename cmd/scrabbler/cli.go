@@ -57,6 +57,7 @@ func Run(args []string) int {
 // Start scrabbler application
 func start(config *config.ScrabblerConfiguration) {
 	log.Do.Infof("Scrabbler started")
+	log.Do.Infof("PID: %d\n", os.Getpid())
 	var wg sync.WaitGroup
 	wg.Add(1)
 	go func() {
