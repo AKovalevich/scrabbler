@@ -3,11 +3,9 @@ package server
 import (
 	"os/signal"
 	"syscall"
-	"time"
 	"os"
 
 	log "github.com/AKovalevich/scrabbler/log/logrus"
-
 )
 
 func (server *Server) configureSignals() {
@@ -20,21 +18,17 @@ func (server *Server) listenSignals() {
 		sig := <-server.signals
 		switch sig {
 		case syscall.SIGINT:
+			log.Do.Info("Shutdown")
+			server.Close()
 		case syscall.SIGTERM:
-			log.Do.Info("Fast shutdown")
-			break
+			log.Do.Info("Shutdown")
+			server.Close()
 		case syscall.SIGUSR1:
 			log.Do.Info("Re-opening log files")
-			break
 		case syscall.SIGQUIT:
 			log.Do.Info("Graceful shutdown")
-			break
 		case syscall.SIGHUP:
 			log.Do.Info("Changing configuration")
-			break
-		default:
-			log.Do.Info("Stopping server gracefully")
-			//server.Stop()
 		}
 	}
 }

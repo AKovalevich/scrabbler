@@ -22,3 +22,5 @@ certs
 # Coverage
 .coverprofile
 coverage.txt
+
+.idea

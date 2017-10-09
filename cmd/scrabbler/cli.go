@@ -2,14 +2,12 @@ package scrabbler
 
 import (
 	"runtime"
-	"fmt"
 	"os"
 
 	log "github.com/AKovalevich/scrabbler/log/logrus"
 	"github.com/AKovalevich/scrabbler/config"
 	"github.com/AKovalevich/scrabbler/server"
 	"github.com/containous/flaeg"
-	"sync"
 )
 
 func Run(args []string) int {
@@ -35,7 +33,6 @@ func Run(args []string) int {
 		Config:					struct{}{},
 		DefaultPointersConfig:	struct{}{},
 		Run: func() error {
-			fmt.Print("OK")
 			os.Exit(0)
 			return nil
 		},
@@ -58,10 +55,6 @@ func Run(args []string) int {
 func start(config *config.ScrabblerConfiguration) {
 	log.Do.Infof("Scrabbler started")
 	log.Do.Infof("PID: %d\n", os.Getpid())
-	var wg sync.WaitGroup
-	wg.Add(1)
-	go func() {
-		server.Serve()
-	}()
-	wg.Wait()
+	s := server.NewServer(config)
+	s.Serve()
 }

@@ -2,41 +2,71 @@ package server
 
 
 import (
-	"fmt"
+	"os"
 
 	log "github.com/AKovalevich/scrabbler/log/logrus"
-	"github.com/buaazp/fasthttprouter"
-	"github.com/valyala/fasthttp"
-	"os"
-	//"github.com/cdipaolo/goml/cluster"
-	//"net/http"
+	"github.com/AKovalevich/scrabbler/config"
+	"sync"
+	"net/http"
+	"context"
+	"time"
+	"os/signal"
 )
 
 // Server is the reverse-proxy/load-balancer engine
 type Server struct {
-	//configurationChan             chan types.ConfigMessage
-	//configurationValidatedChan    chan types.ConfigMessage
-	signals                       chan os.Signal
-	stopChan                      chan bool
-	//providers                     []provider.Provider
-	//currentConfigurations         safe.Safe
-	//globalConfiguration           configuration.GlobalConfiguration
-	//accessLoggerMiddleware        *accesslog.LogHandler
-	//routinesPool                  *safe.Pool
-	//leadership                    *cluster.Leadership
-	//defaultForwardingRoundTripper http.RoundTripper
-	//metricsRegistry               metrics.Registry
+	mainConfiguration *config.ScrabblerConfiguration
+	signals							chan os.Signal
+	stopChan						chan bool
+	mainHttpServer					*http.Server
+	webUiHttpServer					*http.Server
 }
 
-func Serve() {
+func NewServer(config *config.ScrabblerConfiguration) Server {
 	var server Server
+	server.mainConfiguration = config
 
+	log.Do.Info("Configure signals and listeners...")
+	// Configure signals
 	server.configureSignals()
-	server.listenSignals()
-	// server configure
-	router := fasthttprouter.New()
-	router.GET("/", func (ctx *fasthttp.RequestCtx) {
-		fmt.Fprint(ctx, "Welcome!\n")
-	})
-	log.Do.Fatal(fasthttp.ListenAndServe(":8080", router.Handler))
+	go server.listenSignals()
+
+	log.Do.Info("Configure HTTP services...")
+	// Configure main scrabbler HTTP server
+	server.configureMainHttpServer()
+	server.configureWebUiHttpServer()
+
+	return server
+}
+
+func (server *Server) Serve() {
+	var wg sync.WaitGroup
+	wg.Add(2)
+	go func() {
+		go server.runMainServer()
+		go server.runWebUiServer()
+	}()
+	wg.Wait()
+}
+
+func (server * Server) Close() {
+	// Close Web UI HTTP server
+	ctx, cancel := context.WithTimeout(context.Background(), 5 * time.Second)
+
+	if err := server.webUiHttpServer.Shutdown(ctx); err != nil {
+		log.Do.Errorf("Error: %v\n", err)
+	} else {
+		log.Do.Info("Web server is stopped")
+	}
+
+	if err := server.webUiHttpServer.Shutdown(ctx); err != nil {
+		log.Do.Errorf("Error: %v\n", err)
+	} else {
+		log.Do.Info("Main server is stopped")
+	}
+
+	signal.Stop(server.signals)
+	close(server.signals)
+	//close(server.stopChan)
+	cancel()
 }
