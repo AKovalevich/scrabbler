@@ -17,11 +17,11 @@ func Run(args []string) int {
 	scrabblerPointersConfiguration := config.NewScrabblerDefaultConfiguration()
 
 	scrabblerCmd := &flaeg.Command{
-		Name:					"scrabbler",
-		Description:			`scrabbler text classification`,
+		Name:					"Scrabbler",
+		Description:			`Scrabbler text classification server`,
 		Config:					scrabblerConfiguration,
 		DefaultPointersConfig:	scrabblerPointersConfiguration,
-		Run: func() error {
+			Run: func() error {
 			start(scrabblerConfiguration)
 			return nil
 		},

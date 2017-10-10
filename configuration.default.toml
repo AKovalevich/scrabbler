@@ -1,0 +1,9 @@
+debug = true
+log_level = "info"
+config_file_dir = ""
+server_port = 1111
+server_host = "localhost"
+web_ui = true
+web_ui_port = 1112
+web_ui_host = "localhost"
+grace_time_out = 5

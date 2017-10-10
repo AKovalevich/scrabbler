@@ -3,14 +3,14 @@ package server
 
 import (
 	"os"
+	"sync"
+	"context"
+	"net/http"
+	"os/signal"
 
 	log "github.com/AKovalevich/scrabbler/log/logrus"
 	"github.com/AKovalevich/scrabbler/config"
-	"sync"
-	"net/http"
-	"context"
 	"time"
-	"os/signal"
 )
 
 // Server is the reverse-proxy/load-balancer engine
@@ -49,24 +49,37 @@ func (server *Server) Serve() {
 	wg.Wait()
 }
 
+func (server *Server) Stop() {
+	defer log.Do.Info("Server stopped")
+	var entryPoints []*http.Server
+	if server.mainConfiguration.WebUI {
+		entryPoints = append(entryPoints, server.webUiHttpServer)
+	}
+	entryPoints = append(entryPoints, server.mainHttpServer)
+	var wg sync.WaitGroup
+	for _, v := range entryPoints {
+		wg.Add(1)
+		go func(srv *http.Server) {
+			defer wg.Done()
+			graceTimeOut := time.Duration(server.mainConfiguration.GraceTimeOut)
+			ctx, cancel := context.WithTimeout(context.Background(), graceTimeOut)
+			log.Do.Debugf("Waiting %s seconds before killing connections on %s...", graceTimeOut, "server")
+			if err := srv.Shutdown(ctx); err != nil {
+				log.Do.Debugf("Wait is over due to: %s", err)
+				srv.Close()
+			}
+			cancel()
+			log.Do.Debugf("Entry point is closed")
+		}(v)
+	}
+
+	wg.Wait()
+	server.Close()
+}
+
 func (server * Server) Close() {
 	// Close Web UI HTTP server
-	ctx, cancel := context.WithTimeout(context.Background(), 5 * time.Second)
-
-	if err := server.webUiHttpServer.Shutdown(ctx); err != nil {
-		log.Do.Errorf("Error: %v\n", err)
-	} else {
-		log.Do.Info("Web server is stopped")
-	}
-
-	if err := server.webUiHttpServer.Shutdown(ctx); err != nil {
-		log.Do.Errorf("Error: %v\n", err)
-	} else {
-		log.Do.Info("Main server is stopped")
-	}
-
 	signal.Stop(server.signals)
 	close(server.signals)
-	//close(server.stopChan)
-	cancel()
+	os.Exit(1)
 }

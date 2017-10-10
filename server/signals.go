@@ -19,10 +19,10 @@ func (server *Server) listenSignals() {
 		switch sig {
 		case syscall.SIGINT:
 			log.Do.Info("Shutdown")
-			server.Close()
+			server.Stop()
 		case syscall.SIGTERM:
 			log.Do.Info("Shutdown")
-			server.Close()
+			server.Stop()
 		case syscall.SIGUSR1:
 			log.Do.Info("Re-opening log files")
 		case syscall.SIGQUIT:
