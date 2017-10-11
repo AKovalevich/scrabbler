@@ -73,8 +73,8 @@ HAS_LINT := $(shell command -v golint;)
 .PHONY: bootstrap
 bootstrap:
 ifndef HAS_DEP
-    go get -u -f github.com/golang/dep/cmd/dep
+	go get -u -f github.com/golang/dep/cmd/dep
 endif
 ifndef HAS_LINT
-    go get -u -f github.com/golang/lint/golint
+	go get -u -f github.com/golang/lint/golint
 endif
