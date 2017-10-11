@@ -10,6 +10,16 @@ SCRABBLER_LOCAL_HOST?=0.0.0.0
 SCRABBLER_LOCAL_PORT?=8080
 SCRABBLER_LOG_LEVEL?=0
 
+REGISTRY?=hub.docker.com
+NAMESPACE?=akovalevich
+CONTAINER_IMAGE?=${NAMESPACE}/${APP}
+CONTAINER_NAME?=${APP}-${NAMESPACE}
+
+.PHONY: push
+push: build
+	@echo "+ $@"
+	@docker push $(CONTAINER_IMAGE):$(RELEASE)
+
 .PHONY: build
 build: vendor test
 	@echo "+ $@"
@@ -21,10 +31,10 @@ build: vendor test
 .PHONY: run
 run: build
 	@echo "+ $@"
-	@docker run --name ${CONTAINER_NAME} -p ${SCRABBLER_LOCAL_PORT}:${K8SAPP_LOCAL_PORT} \
-		-e "K8SAPP_LOCAL_HOST=${K8SAPP_LOCAL_HOST}" \
-		-e "K8SAPP_LOCAL_PORT=${K8SAPP_LOCAL_PORT}" \
-		-e "K8SAPP_LOG_LEVEL=${K8SAPP_LOG_LEVEL}" \
+	@docker run --name ${CONTAINER_NAME} \
+		-e "SCRABBLER_LOCAL_HOST=${K8SAPP_LOCAL_HOST}" \
+		-e "SCRABBLER_LOCAL_PORT=${K8SAPP_LOCAL_PORT}" \
+		-e "SCRABBLER_LOG_LEVEL=${K8SAPP_LOG_LEVEL}" \
 		-d $(CONTAINER_IMAGE):$(RELEASE)
 	@sleep 1
 	@docker logs ${CONTAINER_NAME}

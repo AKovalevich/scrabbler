@@ -8,12 +8,6 @@
   version = "v1.0.3"
 
 [[projects]]
-  name = "github.com/buaazp/fasthttprouter"
-  packages = ["."]
-  revision = "ade4e2031af3aed7fffd241084aad80a58faf421"
-  version = "v0.1.1"
-
-[[projects]]
   branch = "master"
   name = "github.com/containous/flaeg"
   packages = ["."]
@@ -24,24 +18,6 @@
   name = "github.com/hashicorp/go-version"
   packages = ["."]
   revision = "fc61389e27c71d120f87031ca8c88a3428f372dd"
-
-[[projects]]
-  name = "github.com/klauspost/compress"
-  packages = ["flate","gzip","zlib"]
-  revision = "6c8db69c4b49dd4df1fff66996cf556176d0b9bf"
-  version = "v1.2.1"
-
-[[projects]]
-  name = "github.com/klauspost/cpuid"
-  packages = ["."]
-  revision = "ae7887de9fa5d2db4eaa8174a7eff2c1ac00f2da"
-  version = "v1.1"
-
-[[projects]]
-  name = "github.com/klauspost/crc32"
-  packages = ["."]
-  revision = "cb6bfca970f6908083f26f39a79009d608efd5cd"
-  version = "v1.1"
 
 [[projects]]
   name = "github.com/ogier/pflag"
@@ -68,12 +44,6 @@
   revision = "7ed5dc1cca34bb0c9e8f0e58dcf19b6dea3044d5"
 
 [[projects]]
-  name = "github.com/valyala/fasthttp"
-  packages = [".","fasthttputil"]
-  revision = "d42167fd04f636e20b005e9934159e95454233c7"
-  version = "v20160617"
-
-[[projects]]
   branch = "master"
   name = "golang.org/x/crypto"
   packages = ["ssh/terminal"]
@@ -94,6 +64,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "004d4e593ed75efb13a26e1966a723181c6121c7f7a85808f8dd5c4e7946de45"
+  inputs-digest = "24df39fd860cd68995e01041de817ed659bc506f1e3052ba7d5229cf45ebd208"
   solver-name = "gps-cdcl"
   solver-version = 1
