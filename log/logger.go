@@ -1,8 +1,8 @@
 package log
 
 import (
-	"io"
 	"strconv"
+	"io"
 )
 
 type Level int

@@ -6,3 +6,4 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/AKovalevich/scrabbler)](https://goreportcard.com/badge/github.com/AKovalevich/scrabbler)
 [![](https://images.microbadger.com/badges/version/akovalevich/scrabbler.svg)](https://microbadger.com/images/akovalevich/scrabbler)
 [![codecov](https://codecov.io/gh/akovalevich/scrabbler/branch/master/graph/badge.svg)](https://codecov.io/gh/akovalevich/scrabbler)
+

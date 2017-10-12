@@ -1,8 +1,9 @@
 package version
 
 import (
-	"github.com/hashicorp/go-version"
 	"log"
+
+	"github.com/hashicorp/go-version"
 )
 
 const (

@@ -1,11 +1,11 @@
 package scrabbler
 
 import (
-	"github.com/AKovalevich/scrabbler/version"
-
-	"github.com/containous/flaeg"
-	"fmt"
 	"runtime"
+	"fmt"
+
+	"github.com/AKovalevich/scrabbler/version"
+	"github.com/containous/flaeg"
 )
 
 const (

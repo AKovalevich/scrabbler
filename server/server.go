@@ -1,16 +1,15 @@
 package server
 
-
 import (
-	"os"
-	"sync"
-	"context"
-	"net/http"
 	"os/signal"
+	"net/http"
+	"context"
+	"time"
+	"sync"
+	"os"
 
 	log "github.com/AKovalevich/scrabbler/log/logrus"
 	"github.com/AKovalevich/scrabbler/config"
-	"time"
 )
 
 // Server is the reverse-proxy/load-balancer engine

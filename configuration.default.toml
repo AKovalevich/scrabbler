@@ -1,6 +1,6 @@
 debug = true
 log_level = "info"
-config_file_dir = ""
+config_file_path = "configuration.dafault.toml"
 server_port = 1111
 server_host = "localhost"
 web_ui = true

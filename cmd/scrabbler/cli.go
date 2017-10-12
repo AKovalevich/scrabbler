@@ -21,7 +21,7 @@ func Run(args []string) int {
 		Description:			`Scrabbler text classification server`,
 		Config:					scrabblerConfiguration,
 		DefaultPointersConfig:	scrabblerPointersConfiguration,
-			Run: func() error {
+		Run: func() error {
 			start(scrabblerConfiguration)
 			return nil
 		},
