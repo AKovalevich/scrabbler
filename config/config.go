@@ -1,7 +1,9 @@
 package config
 
 import (
+	"sync"
 	"time"
+	"reflect"
 
 	"github.com/BurntSushi/toml"
 	"github.com/containous/flaeg"
@@ -15,23 +17,27 @@ const (
 	DefaultGraceTimeout = 10 * time.Second
 
 	// DefaultConfigFileName path to configuration file
-	DefaultConfigPath = "/configuration.default.toml"
+	DefaultConfigPath = "configuration.default.toml"
 )
 
+// The main Scrabbler configuration
 type ScrabblerConfiguration struct {
+	sync.RWMutex
 	// Main configuration
-	Debug			bool	`default:"false" toml:"debug" short:"d" description:"Enable debug mode" export:"true"`
-	LogLevel		string	`default:"info" toml:"log_level" short:"l" description:"Log level" export:"true"`
-	ConfigFilePath	string	`default:"configuration.default.toml" toml:"config_file_path" short:"c" description:"Path to configuration directory, load configuration.toml file in a directory"`
+	Debug			bool	`toml:"debug" short:"d" description:"Enable debug mode" export:"true"`
+	LogLevel		string	`toml:"log_level" short:"l" description:"Log level" export:"true"`
+	ConfigFilePath	string	`toml:"config_file_path" short:"c" description:"Path to configuration directory, load configuration.toml file in a directory"`
 	// Scrabbler server configuration
-	ServerPort		int		`default:"1111" toml:"server_port" short:"sp" description:"Scrabbler web server port"`
-	ServerHost		string	`default:"localhost" toml:"server_host" short:"sd" description:"Scrabbler web server host"`
+	ServerPort		int		`toml:"server_port" short:"sp" description:"Scrabbler web server port"`
+	ServerHost		string	`toml:"server_host" short:"sd" description:"Scrabbler web server host"`
 	// Web UI configuration
-	WebUI			bool 	`default:"true" toml:"web_ui" short:"w" description:"Run service with web UI"`
-	WebUIPort		int		`default:"1112" toml:"web_ui_port" short:"wp" description:"Web UI port"`
-	WebUIHost		string	`default:"localhost" toml:"web_ui_host" short:"wh" description:"Web UI host"`
+	WebUI			bool 	`toml:"web_ui" short:"w" description:"Run service with web UI"`
+	WebUIPort		int		`toml:"web_ui_port" short:"wp" description:"Web UI port"`
+	WebUIHost		string	`toml:"web_ui_host" short:"wh" description:"Web UI host"`
 	// Shutdown configuration
-	GraceTimeOut 	flaeg.Duration `default:"localhost" grace_time_out:"g" description:"Duration to give active requests a chance to finish before Scrabbler stops"`
+	GraceTimeOut 	flaeg.Duration `toml:"grace_time_out" short:"g" description:"Duration to give active requests a chance to finish before Scrabbler stops"`
+	// Entrypoints configuration
+	EntryPoints 	flaeg.SliceStrings `toml:"entry_points" short:"e" description:"Scrabbler server entry points"`
 }
 
 func NewScrabblerConfiguration() *ScrabblerConfiguration {
@@ -39,19 +45,13 @@ func NewScrabblerConfiguration() *ScrabblerConfiguration {
 }
 
 func NewScrabblerDefaultConfiguration() *ScrabblerConfiguration {
-	return &ScrabblerConfiguration{
-		Debug: true,
-		LogLevel: "info",
-		ServerPort: 8787,
-		ServerHost: "localhost",
-		WebUI: true,
-		WebUIPort: 8788,
-		WebUIHost: "localhost",
-		GraceTimeOut: flaeg.Duration(DefaultGraceTimeout),
-	}
+	// Will take data from configuration file
+	return &ScrabblerConfiguration{}
 }
 
+// Reload configuration from file
 func (config *ScrabblerConfiguration) Reload() {
+	log.Do.Info("Load configuration...")
 	var configFilePath string
 	var tmpScreabblerConfiguration ScrabblerConfiguration
 
@@ -65,5 +65,78 @@ func (config *ScrabblerConfiguration) Reload() {
 		log.Do.Error(err)
 	}
 
+	tmpConfigStructureValues := reflect.ValueOf(&tmpScreabblerConfiguration).Elem()
+	realConfigStructureValues := reflect.ValueOf(config).Elem()
+	realConfigStructureTypes := reflect.TypeOf(*config)
 
+	for indexRealConfigStructure := 0; indexRealConfigStructure < realConfigStructureValues.NumField(); indexRealConfigStructure++ {
+		var fieldName string
+		var field reflect.Value
+
+		// Get field from real configuration structure
+		fieldName = realConfigStructureTypes.Field(indexRealConfigStructure).Name
+		field = realConfigStructureValues.FieldByName(fieldName)
+
+		// Check if field is empty
+		if isEmpty(field.Interface()) && field.CanSet() {
+			config.Lock()
+			// Try to get field from tmp configuration structure (form configuration file)
+			tmpField := tmpConfigStructureValues.FieldByName(fieldName)
+			f := tmpField.Interface()
+			val := reflect.ValueOf(f)
+
+			// Try to set values to global configuration structure
+			switch field.Kind() {
+			case reflect.Bool:
+				field.SetBool(val.Bool())
+				break
+			case reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64:
+				field.SetInt(val.Int())
+				break
+			case reflect.Uint, reflect.Uint8, reflect.Uint16, reflect.Uint32, reflect.Uint64, reflect.Uintptr:
+				field.SetUint(val.Uint())
+				break
+			case reflect.Float32, reflect.Float64:
+				field.SetFloat(val.Float())
+				break
+			case reflect.Complex64, reflect.Complex128:
+				field.SetComplex(val.Complex())
+				break
+			case reflect.String:
+				field.SetString(val.String())
+				break
+			case reflect.Array:
+				break
+			case reflect.Slice:
+				break
+			}
+			config.Unlock()
+		}
+	}
+}
+
+// Check if field is empty
+func isEmpty(object interface{}) bool {
+	if object == nil {
+		return true
+	} else if object == "" {
+		return true
+	} else if object == false {
+		return true
+	} else if object == nil {
+		return true
+	} else if object == 0 {
+		return true
+	}
+
+	//Then see if it's a struct
+	if reflect.ValueOf(object).Kind() == reflect.Struct {
+		// and create an empty copy of the struct object to compare against
+		empty := reflect.New(reflect.TypeOf(object)).Elem().Interface()
+		if reflect.DeepEqual(object, empty) {
+			return true
+		}
+	}
+
+	return false
 }

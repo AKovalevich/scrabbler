@@ -17,18 +17,13 @@ func (server *Server) listenSignals() {
 	for {
 		sig := <-server.signals
 		switch sig {
-		case syscall.SIGINT:
-			log.Do.Info("Shutdown")
-			server.Stop()
-		case syscall.SIGTERM:
-			log.Do.Info("Shutdown")
+		case syscall.SIGINT, syscall.SIGTERM, syscall.SIGQUIT:
+			log.Do.Info("Graceful shutdown...")
 			server.Stop()
 		case syscall.SIGUSR1:
 			log.Do.Info("Re-opening log files")
-		case syscall.SIGQUIT:
-			log.Do.Info("Graceful shutdown")
 		case syscall.SIGHUP:
-			log.Do.Info("Changing configuration")
+			server.mainConfiguration.Reload()
 		}
 	}
 }

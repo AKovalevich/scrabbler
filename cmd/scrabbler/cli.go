@@ -22,6 +22,7 @@ func Run(args []string) int {
 		Config:					scrabblerConfiguration,
 		DefaultPointersConfig:	scrabblerPointersConfiguration,
 		Run: func() error {
+			scrabblerConfiguration.Reload()
 			start(scrabblerConfiguration)
 			return nil
 		},
@@ -48,13 +49,14 @@ func Run(args []string) int {
 	if err := f.Run(); err != nil {
 		log.Do.Error("Running error: ", err.Error())
 	}
+
 	return 1
 }
 
 // Start scrabbler application
 func start(config *config.ScrabblerConfiguration) {
 	log.Do.Infof("Scrabbler started")
-	log.Do.Infof("PID: %d\n", os.Getpid())
+	log.Do.Debugf("PID: %d\n", os.Getpid())
 	s := server.NewServer(config)
 	s.Serve()
 }
