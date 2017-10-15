@@ -1,12 +1,14 @@
 package config
 
 import (
+	"fmt"
 	"sync"
 	"time"
 	"reflect"
 
 	"github.com/BurntSushi/toml"
 	"github.com/containous/flaeg"
+	"github.com/AKovalevich/scrabbler/entrypoint"
 	log "github.com/AKovalevich/scrabbler/log/logrus"
 )
 
@@ -23,21 +25,22 @@ const (
 // The main Scrabbler configuration
 type ScrabblerConfiguration struct {
 	sync.RWMutex
+	EntryPointList	[]*entrypoint.Entrypoint
 	// Main configuration
-	Debug			bool	`toml:"debug" short:"d" description:"Enable debug mode" export:"true"`
-	LogLevel		string	`toml:"log_level" short:"l" description:"Log level" export:"true"`
-	ConfigFilePath	string	`toml:"config_file_path" short:"c" description:"Path to configuration directory, load configuration.toml file in a directory"`
+	Debug			bool						`toml:"debug" short:"d" description:"Enable debug mode" export:"true"`
+	LogLevel		string						`toml:"log_level" short:"l" description:"Log level" export:"true"`
+	ConfigFilePath	string						`toml:"config_file_path" short:"c" description:"Path to configuration directory, load configuration.toml file in a directory" export:"true"`
 	// Scrabbler server configuration
-	ServerPort		int		`toml:"server_port" short:"sp" description:"Scrabbler web server port"`
-	ServerHost		string	`toml:"server_host" short:"sd" description:"Scrabbler web server host"`
+	ServerPort		int							`toml:"server_port" short:"sp" description:"Scrabbler web server port" export:"true"`
+	ServerHost		string						`toml:"server_host" short:"sd" description:"Scrabbler web server host" export:"true"`
 	// Web UI configuration
-	WebUI			bool 	`toml:"web_ui" short:"w" description:"Run service with web UI"`
-	WebUIPort		int		`toml:"web_ui_port" short:"wp" description:"Web UI port"`
-	WebUIHost		string	`toml:"web_ui_host" short:"wh" description:"Web UI host"`
+	WebUI			bool 						`toml:"web_ui" short:"w" description:"Run service with web UI" export:"true"`
+	WebUIPort		int							`toml:"web_ui_port" short:"wp" description:"Web UI port" export:"true"`
+	WebUIHost		string						`toml:"web_ui_host" short:"wh" description:"Web UI host" export:"true"`
 	// Shutdown configuration
-	GraceTimeOut 	flaeg.Duration `toml:"grace_time_out" short:"g" description:"Duration to give active requests a chance to finish before Scrabbler stops"`
+	GraceTimeOut 	flaeg.Duration 				`toml:"grace_time_out" short:"g" description:"Duration to give active requests a chance to finish before Scrabbler stops" export:"true"`
 	// Entrypoints configuration
-	EntryPoints 	flaeg.SliceStrings `toml:"entry_points" short:"e" description:"Scrabbler server entry points"`
+	EntryPoints 	entrypoint.EntrypointList 	`toml:"entry_points" short:"e" description:"Scrabbler server entry points" export:"true"`
 }
 
 func NewScrabblerConfiguration() *ScrabblerConfiguration {
@@ -49,8 +52,13 @@ func NewScrabblerDefaultConfiguration() *ScrabblerConfiguration {
 	return &ScrabblerConfiguration{}
 }
 
-// Reload configuration from file
+// Reload configuration
 func (config *ScrabblerConfiguration) Reload() {
+	config.Load()
+}
+
+// Load configuration from file
+func (config *ScrabblerConfiguration) Load() {
 	log.Do.Info("Load configuration...")
 	var configFilePath string
 	var tmpScreabblerConfiguration ScrabblerConfiguration
@@ -113,6 +121,7 @@ func (config *ScrabblerConfiguration) Reload() {
 			config.Unlock()
 		}
 	}
+	fmt.Printf("%+v\n", config.EntryPointList)
 }
 
 // Check if field is empty
@@ -139,4 +148,9 @@ func isEmpty(object interface{}) bool {
 	}
 
 	return false
+}
+
+func CustomEntryPointParsers() (reflect.Type, *entrypoint.EntrypointList) {
+	// Add custom parsers to flaeg
+	return reflect.TypeOf(entrypoint.EntrypointList{}), &entrypoint.EntrypointList{}
 }

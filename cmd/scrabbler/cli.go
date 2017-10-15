@@ -26,6 +26,9 @@ func Run(args []string) int {
 			start(scrabblerConfiguration)
 			return nil
 		},
+		Metadata: map[string]string{
+			"parseAllSources": "true",
+		},
 	}
 
 	healthCheckCmd := &flaeg.Command{
@@ -45,6 +48,10 @@ func Run(args []string) int {
 	f := flaeg.New(scrabblerCmd, args)
 	f.AddCommand(healthCheckCmd)
 	f.AddCommand(newVersionCmd())
+
+	// Add custom parsers to flaeg
+	parserType, parser := config.CustomEntryPointParsers()
+	f.AddParser(parserType, parser)
 
 	if err := f.Run(); err != nil {
 		log.Do.Error("Running error: ", err.Error())
