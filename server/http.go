@@ -16,7 +16,9 @@ func (server *Server) configureMainHttpServer() {
 		log.Do.Info("TEST")
 		log.Do.Info(entrypoint.String())
 
+		log.Do.Info("Initialize " + entrypoint.String() + " entrypoint...")
 		entrypoint.Init()
+		log.Do.Info("Prepare " + entrypoint.String() + " routes...")
 		routesList := entrypoint.RoutesList()
 		for _, route := range routesList {
 			s.HandleFunc(route.Path, route.Handler)

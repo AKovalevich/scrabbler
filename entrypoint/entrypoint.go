@@ -30,7 +30,7 @@ type EntrypointList []Entrypoint
 // Set's argument is a string to be parsed to set the flag.
 // It's a comma-separated list, so we split it.
 func (e *EntrypointList) Set(value string) error {
-	entrypoints := strings.Split(parseEntryPoints(value), ",")
+	entrypoints := strings.Split(value, ",")
 
 	if len(entrypoints) == 0 {
 		return fmt.Errorf("bad EntryPointList format: %s", value)
@@ -46,7 +46,7 @@ func (e *EntrypointList) Set(value string) error {
 			break
 		case "profanity":
 			profanityEntrypoint := profanity.New()
-			profanityEntrypoint.Name = "textclassifier"
+			profanityEntrypoint.Name = "profanity"
 			*e = append(*e, profanityEntrypoint)
 		}
 	}
