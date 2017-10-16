@@ -1,11 +1,13 @@
-package textclassifier
+package profanity
 
 import (
 	"net/http"
 	"fmt"
 
+	"github.com/BurntSushi/toml"
 	"github.com/lytics/multibayes"
 	"github.com/AKovalevich/scrabbler/route"
+	log "github.com/AKovalevich/scrabbler/log/logrus"
 )
 
 type Entrypoint struct {
@@ -15,11 +17,13 @@ type Entrypoint struct {
 }
 
 type TrainData struct {
-	Text string
-	Classes []string
+	Text string 		`toml:"text"`
+	Classes []string 	`toml:"classes"`
 }
 
-type TrainDataList []TrainData
+type TrainDataList struct {
+	TrainData []TrainData
+}
 
 // Create new entrypoint
 func New() *Entrypoint {
@@ -44,22 +48,23 @@ func (txe *Entrypoint) Stop() {}
 func (txe *Entrypoint) Init() {
 	txe.Routes = []route.Route{
 		{
-			Path: "/train",
+			Path: "/profanity/train",
 			Handler: func(w http.ResponseWriter, r *http.Request) {
 				fmt.Fprint(w, "Welcome!\n")
 			},
 		},
 		{
-			Path: "/test-train",
+			Path: "/profanity/test-train",
 			Handler: func(w http.ResponseWriter, r *http.Request) {
 				txe.TestTrain()
 				fmt.Fprint(w, "Done!\n")
 			},
 		},
 		{
-			Path: "/get-result",
+			Path: "/profanity/get-result",
 			Handler: func(w http.ResponseWriter, r *http.Request) {
-				data := txe.GetData()
+				text := r.URL.Query().Get("text")
+				data := txe.GetData(text)
 				fmt.Fprintf(w,"Posterior Probabilities: %+v\n", data)
 			},
 		},
@@ -78,24 +83,15 @@ func (txe *Entrypoint) Train(data []TrainData) {
 }
 
 func (txe *Entrypoint) TestTrain() {
-	trainList := TrainDataList{
-		{
-			Text:    "My dog has fleas.",
-			Classes: []string{"vet"},
-		},
-		{
-			Text:    "My cat has ebola.",
-			Classes: []string{"vet", "cdc"},
-		},
-		{
-			Text:    "Aaron has ebola.",
-			Classes: []string{"cdc"},
-		},
+	trainList := TrainDataList{}
+
+	if _, err := toml.DecodeFile("entrypoint/profanity/train.ru.data.toml", &trainList); err != nil {
+		log.Do.Error(err)
 	}
 
-	txe.Train(trainList)
+	txe.Train(trainList.TrainData)
 }
 
-func (txe *Entrypoint) GetData() map[string]float64 {
-	return txe.Instance.Posterior("dog")
+func (txe *Entrypoint) GetData(text string) map[string]float64 {
+	return txe.Instance.Posterior(text)
 }

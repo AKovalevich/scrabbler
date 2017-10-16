@@ -1,0 +1,2535 @@
+[[traindata]]
+text = "6ля"
+classes = ["profanity"]
+
+[[traindata]]
+text = "6лядь"
+classes = ["profanity"]
+
+[[traindata]]
+text = "6лять"
+classes = ["profanity"]
+
+[[traindata]]
+text = "b3ъeб"
+classes = ["profanity"]
+
+[[traindata]]
+text = "cock"
+classes = ["profanity"]
+
+[[traindata]]
+text = "cunt"
+classes = ["profanity"]
+
+[[traindata]]
+text = "e6aль"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ebal"
+classes = ["profanity"]
+
+[[traindata]]
+text = "eblan"
+classes = ["profanity"]
+
+[[traindata]]
+text = "eбaл"
+classes = ["profanity"]
+
+[[traindata]]
+text = "eбaть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "eбyч"
+classes = ["profanity"]
+
+[[traindata]]
+text = "eбать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "eбёт"
+classes = ["profanity"]
+
+[[traindata]]
+text = "eблантий"
+classes = ["profanity"]
+
+[[traindata]]
+text = "fuck"
+classes = ["profanity"]
+
+[[traindata]]
+text = "fucker"
+classes = ["profanity"]
+
+[[traindata]]
+text = "fucking"
+classes = ["profanity"]
+
+[[traindata]]
+text = "xyёв"
+classes = ["profanity"]
+
+[[traindata]]
+text = "xyй"
+classes = ["profanity"]
+
+[[traindata]]
+text = "xyя"
+classes = ["profanity"]
+
+[[traindata]]
+text = "xуе"
+classes = ["profanity"]
+
+[[traindata]]
+text = "xуй"
+classes = ["profanity"]
+
+[[traindata]]
+text = "xую"
+classes = ["profanity"]
+
+[[traindata]]
+text = "zaeb"
+classes = ["profanity"]
+
+[[traindata]]
+text = "zaebal"
+classes = ["profanity"]
+
+[[traindata]]
+text = "zaebali"
+classes = ["profanity"]
+
+[[traindata]]
+text = "zaebat"
+classes = ["profanity"]
+
+[[traindata]]
+text = "архипиздрит"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ахуел"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ахуеть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "бздение"
+classes = ["profanity"]
+
+[[traindata]]
+text = "бздеть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "бздех"
+classes = ["profanity"]
+
+[[traindata]]
+text = "бздецы"
+classes = ["profanity"]
+
+[[traindata]]
+text = "бздит"
+classes = ["profanity"]
+
+[[traindata]]
+text = "бздицы"
+classes = ["profanity"]
+
+[[traindata]]
+text = "бздло"
+classes = ["profanity"]
+
+[[traindata]]
+text = "бзднуть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "бздун"
+classes = ["profanity"]
+
+[[traindata]]
+text = "бздунья"
+classes = ["profanity"]
+
+[[traindata]]
+text = "бздюха"
+classes = ["profanity"]
+
+[[traindata]]
+text = "бздюшка"
+classes = ["profanity"]
+
+[[traindata]]
+text = "бздюшко"
+classes = ["profanity"]
+
+[[traindata]]
+text = "бля"
+classes = ["profanity"]
+
+[[traindata]]
+text = "блябу"
+classes = ["profanity"]
+
+[[traindata]]
+text = "блябуду"
+classes = ["profanity"]
+
+[[traindata]]
+text = "бляд"
+classes = ["profanity"]
+
+[[traindata]]
+text = "бляди"
+classes = ["profanity"]
+
+[[traindata]]
+text = "блядина"
+classes = ["profanity"]
+
+[[traindata]]
+text = "блядище"
+classes = ["profanity"]
+
+[[traindata]]
+text = "блядки"
+classes = ["profanity"]
+
+[[traindata]]
+text = "блядовать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "блядство"
+classes = ["profanity"]
+
+[[traindata]]
+text = "блядун"
+classes = ["profanity"]
+
+[[traindata]]
+text = "блядуны"
+classes = ["profanity"]
+
+[[traindata]]
+text = "блядунья"
+classes = ["profanity"]
+
+[[traindata]]
+text = "блядь"
+classes = ["profanity"]
+
+[[traindata]]
+text = "блядюга"
+classes = ["profanity"]
+
+[[traindata]]
+text = "блять"
+classes = ["profanity"]
+
+[[traindata]]
+text = "вафел"
+classes = ["profanity"]
+
+[[traindata]]
+text = "вафлёр"
+classes = ["profanity"]
+
+[[traindata]]
+text = "взъебка"
+classes = ["profanity"]
+
+[[traindata]]
+text = "взьебка"
+classes = ["profanity"]
+
+[[traindata]]
+text = "взьебывать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "въеб"
+classes = ["profanity"]
+
+[[traindata]]
+text = "въебался"
+classes = ["profanity"]
+
+[[traindata]]
+text = "въебенн"
+classes = ["profanity"]
+
+[[traindata]]
+text = "въебусь"
+classes = ["profanity"]
+
+[[traindata]]
+text = "въебывать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "выблядок"
+classes = ["profanity"]
+
+[[traindata]]
+text = "выблядыш"
+classes = ["profanity"]
+
+[[traindata]]
+text = "выеб"
+classes = ["profanity"]
+
+[[traindata]]
+text = "выебать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "выебен"
+classes = ["profanity"]
+
+[[traindata]]
+text = "выебнулся"
+classes = ["profanity"]
+
+[[traindata]]
+text = "выебон"
+classes = ["profanity"]
+
+[[traindata]]
+text = "выебываться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "выпердеть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "высраться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "выссаться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "вьебен"
+classes = ["profanity"]
+
+[[traindata]]
+text = "гавно"
+classes = ["profanity"]
+
+[[traindata]]
+text = "гавнюк"
+classes = ["profanity"]
+
+[[traindata]]
+text = "гавнючка"
+classes = ["profanity"]
+
+[[traindata]]
+text = "гамно"
+classes = ["profanity"]
+
+[[traindata]]
+text = "гандон"
+classes = ["profanity"]
+
+[[traindata]]
+text = "гнид"
+classes = ["profanity"]
+
+[[traindata]]
+text = "гнида"
+classes = ["profanity"]
+
+[[traindata]]
+text = "гниды"
+classes = ["profanity"]
+
+[[traindata]]
+text = "говенка"
+classes = ["profanity"]
+
+[[traindata]]
+text = "говенный"
+classes = ["profanity"]
+
+[[traindata]]
+text = "говешка"
+classes = ["profanity"]
+
+[[traindata]]
+text = "говназия"
+classes = ["profanity"]
+
+[[traindata]]
+text = "говнецо"
+classes = ["profanity"]
+
+[[traindata]]
+text = "говнище"
+classes = ["profanity"]
+
+[[traindata]]
+text = "говно"
+classes = ["profanity"]
+
+[[traindata]]
+text = "говноед"
+classes = ["profanity"]
+
+[[traindata]]
+text = "говнолинк"
+classes = ["profanity"]
+
+[[traindata]]
+text = "говночист"
+classes = ["profanity"]
+
+[[traindata]]
+text = "говнюк"
+classes = ["profanity"]
+
+[[traindata]]
+text = "говнюха"
+classes = ["profanity"]
+
+[[traindata]]
+text = "говнядина"
+classes = ["profanity"]
+
+[[traindata]]
+text = "говняк"
+classes = ["profanity"]
+
+[[traindata]]
+text = "говняный"
+classes = ["profanity"]
+
+[[traindata]]
+text = "говнять"
+classes = ["profanity"]
+
+[[traindata]]
+text = "гондон"
+classes = ["profanity"]
+
+[[traindata]]
+text = "доебываться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "долбоеб"
+classes = ["profanity"]
+
+[[traindata]]
+text = "долбоёб"
+classes = ["profanity"]
+
+[[traindata]]
+text = "долбоящер"
+classes = ["profanity"]
+
+[[traindata]]
+text = "дрисня"
+classes = ["profanity"]
+
+[[traindata]]
+text = "дрист"
+classes = ["profanity"]
+
+[[traindata]]
+text = "дристануть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "дристать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "дристун"
+classes = ["profanity"]
+
+[[traindata]]
+text = "дристуха"
+classes = ["profanity"]
+
+[[traindata]]
+text = "дрочелло"
+classes = ["profanity"]
+
+[[traindata]]
+text = "дрочена"
+classes = ["profanity"]
+
+[[traindata]]
+text = "дрочила"
+classes = ["profanity"]
+
+[[traindata]]
+text = "дрочилка"
+classes = ["profanity"]
+
+[[traindata]]
+text = "дрочистый"
+classes = ["profanity"]
+
+[[traindata]]
+text = "дрочить"
+classes = ["profanity"]
+
+[[traindata]]
+text = "дрочка"
+classes = ["profanity"]
+
+[[traindata]]
+text = "дрочун"
+classes = ["profanity"]
+
+[[traindata]]
+text = "е6ал"
+classes = ["profanity"]
+
+[[traindata]]
+text = "е6ут"
+classes = ["profanity"]
+
+[[traindata]]
+text = "еб твою мать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ёб твою мать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ёбaн"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебaть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебyч"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебал"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебало"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебальник"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебан"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебанамать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебанат"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебаная"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ёбаная"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебанический"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебанный"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебанныйврот"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебаное"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебануть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебануться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ёбаную"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебаный"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебанько"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебарь"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебат"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ёбат"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебатория"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебать-копать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебаться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебашить"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебёна"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебет"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебёт"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебец"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебик"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебин"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебись"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебическая"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебки"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебла"
+classes = ["profanity"]
+
+[[traindata]]
+text = "еблан"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебливый"
+classes = ["profanity"]
+
+[[traindata]]
+text = "еблище"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебло"
+classes = ["profanity"]
+
+[[traindata]]
+text = "еблыст"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебля"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ёбн"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебнуть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебнуться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебня"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебошить"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебская"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебский"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебтвоюмать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебун"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебут"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебуч"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебуче"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебучее"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебучий"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебучим"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебущ"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ебырь"
+classes = ["profanity"]
+
+[[traindata]]
+text = "елда"
+classes = ["profanity"]
+
+[[traindata]]
+text = "елдак"
+classes = ["profanity"]
+
+[[traindata]]
+text = "елдачить"
+classes = ["profanity"]
+
+[[traindata]]
+text = "жопа"
+classes = ["profanity"]
+
+[[traindata]]
+text = "жопу"
+classes = ["profanity"]
+
+[[traindata]]
+text = "заговнять"
+classes = ["profanity"]
+
+[[traindata]]
+text = "задрачивать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "задристать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "задрота"
+classes = ["profanity"]
+
+[[traindata]]
+text = "зае6"
+classes = ["profanity"]
+
+[[traindata]]
+text = "заё6"
+classes = ["profanity"]
+
+[[traindata]]
+text = "заеб"
+classes = ["profanity"]
+
+[[traindata]]
+text = "заёб"
+classes = ["profanity"]
+
+[[traindata]]
+text = "заеба"
+classes = ["profanity"]
+
+[[traindata]]
+text = "заебал"
+classes = ["profanity"]
+
+[[traindata]]
+text = "заебанец"
+classes = ["profanity"]
+
+[[traindata]]
+text = "заебастая"
+classes = ["profanity"]
+
+[[traindata]]
+text = "заебастый"
+classes = ["profanity"]
+
+[[traindata]]
+text = "заебать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "заебаться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "заебашить"
+classes = ["profanity"]
+
+[[traindata]]
+text = "заебистое"
+classes = ["profanity"]
+
+[[traindata]]
+text = "заёбистое"
+classes = ["profanity"]
+
+[[traindata]]
+text = "заебистые"
+classes = ["profanity"]
+
+[[traindata]]
+text = "заёбистые"
+classes = ["profanity"]
+
+[[traindata]]
+text = "заебистый"
+classes = ["profanity"]
+
+[[traindata]]
+text = "заёбистый"
+classes = ["profanity"]
+
+[[traindata]]
+text = "заебись"
+classes = ["profanity"]
+
+[[traindata]]
+text = "заебошить"
+classes = ["profanity"]
+
+[[traindata]]
+text = "заебываться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "залуп"
+classes = ["profanity"]
+
+[[traindata]]
+text = "залупа"
+classes = ["profanity"]
+
+[[traindata]]
+text = "залупаться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "залупить"
+classes = ["profanity"]
+
+[[traindata]]
+text = "залупиться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "замудохаться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "запиздячить"
+classes = ["profanity"]
+
+[[traindata]]
+text = "засерать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "засерун"
+classes = ["profanity"]
+
+[[traindata]]
+text = "засеря"
+classes = ["profanity"]
+
+[[traindata]]
+text = "засирать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "засрун"
+classes = ["profanity"]
+
+[[traindata]]
+text = "захуячить"
+classes = ["profanity"]
+
+[[traindata]]
+text = "заябестая"
+classes = ["profanity"]
+
+[[traindata]]
+text = "злоеб"
+classes = ["profanity"]
+
+[[traindata]]
+text = "злоебучая"
+classes = ["profanity"]
+
+[[traindata]]
+text = "злоебучее"
+classes = ["profanity"]
+
+[[traindata]]
+text = "злоебучий"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ибанамат"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ибонех"
+classes = ["profanity"]
+
+[[traindata]]
+text = "изговнять"
+classes = ["profanity"]
+
+[[traindata]]
+text = "изговняться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "изъебнуться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ипать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ипаться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ипаццо"
+classes = ["profanity"]
+
+[[traindata]]
+text = "Какдвапальцаобоссать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "конча"
+classes = ["profanity"]
+
+[[traindata]]
+text = "курва"
+classes = ["profanity"]
+
+[[traindata]]
+text = "курвятник"
+classes = ["profanity"]
+
+[[traindata]]
+text = "лох"
+classes = ["profanity"]
+
+[[traindata]]
+text = "лошарa"
+classes = ["profanity"]
+
+[[traindata]]
+text = "лошара"
+classes = ["profanity"]
+
+[[traindata]]
+text = "лошары"
+classes = ["profanity"]
+
+[[traindata]]
+text = "лошок"
+classes = ["profanity"]
+
+[[traindata]]
+text = "лярва"
+classes = ["profanity"]
+
+[[traindata]]
+text = "малафья"
+classes = ["profanity"]
+
+[[traindata]]
+text = "манда"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мандавошек"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мандавошка"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мандавошки"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мандей"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мандень"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мандеть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мандища"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мандой"
+classes = ["profanity"]
+
+[[traindata]]
+text = "манду"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мандюк"
+classes = ["profanity"]
+
+[[traindata]]
+text = "минет"
+classes = ["profanity"]
+
+[[traindata]]
+text = "минетчик"
+classes = ["profanity"]
+
+[[traindata]]
+text = "минетчица"
+classes = ["profanity"]
+
+[[traindata]]
+text = "млять"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мокрощелка"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мокрощёлка"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мразь"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мудak"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мудaк"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мудаг"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мудак"
+classes = ["profanity"]
+
+[[traindata]]
+text = "муде"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мудель"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мудеть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "муди"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мудил"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мудила"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мудистый"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мудня"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мудоеб"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мудозвон"
+classes = ["profanity"]
+
+[[traindata]]
+text = "мудоклюй"
+classes = ["profanity"]
+
+[[traindata]]
+text = "на хер"
+classes = ["profanity"]
+
+[[traindata]]
+text = "на хуй"
+classes = ["profanity"]
+
+[[traindata]]
+text = "набздел"
+classes = ["profanity"]
+
+[[traindata]]
+text = "набздеть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "наговнять"
+classes = ["profanity"]
+
+[[traindata]]
+text = "надристать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "надрочить"
+classes = ["profanity"]
+
+[[traindata]]
+text = "наебать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "наебет"
+classes = ["profanity"]
+
+[[traindata]]
+text = "наебнуть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "наебнуться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "наебывать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "напиздел"
+classes = ["profanity"]
+
+[[traindata]]
+text = "напиздели"
+classes = ["profanity"]
+
+[[traindata]]
+text = "напиздело"
+classes = ["profanity"]
+
+[[traindata]]
+text = "напиздили"
+classes = ["profanity"]
+
+[[traindata]]
+text = "насрать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "настопиздить"
+classes = ["profanity"]
+
+[[traindata]]
+text = "нахер"
+classes = ["profanity"]
+
+[[traindata]]
+text = "нахрен"
+classes = ["profanity"]
+
+[[traindata]]
+text = "нахуй"
+classes = ["profanity"]
+
+[[traindata]]
+text = "нахуйник"
+classes = ["profanity"]
+
+[[traindata]]
+text = "не ебет"
+classes = ["profanity"]
+
+[[traindata]]
+text = "не ебёт"
+classes = ["profanity"]
+
+[[traindata]]
+text = "невротебучий"
+classes = ["profanity"]
+
+[[traindata]]
+text = "невъебенно"
+classes = ["profanity"]
+
+[[traindata]]
+text = "нехира"
+classes = ["profanity"]
+
+[[traindata]]
+text = "нехрен"
+classes = ["profanity"]
+
+[[traindata]]
+text = "Нехуй"
+classes = ["profanity"]
+
+[[traindata]]
+text = "нехуйственно"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ниибацо"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ниипацца"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ниипаццо"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ниипет"
+classes = ["profanity"]
+
+[[traindata]]
+text = "никуя"
+classes = ["profanity"]
+
+[[traindata]]
+text = "нихера"
+classes = ["profanity"]
+
+[[traindata]]
+text = "нихуя"
+classes = ["profanity"]
+
+[[traindata]]
+text = "обдристаться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "обосранец"
+classes = ["profanity"]
+
+[[traindata]]
+text = "обосрать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "обосцать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "обосцаться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "обсирать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "объебос"
+classes = ["profanity"]
+
+[[traindata]]
+text = "обьебать обьебос"
+classes = ["profanity"]
+
+[[traindata]]
+text = "однохуйственно"
+classes = ["profanity"]
+
+[[traindata]]
+text = "опездал"
+classes = ["profanity"]
+
+[[traindata]]
+text = "опизде"
+classes = ["profanity"]
+
+[[traindata]]
+text = "опизденивающе"
+classes = ["profanity"]
+
+[[traindata]]
+text = "остоебенить"
+classes = ["profanity"]
+
+[[traindata]]
+text = "остопиздеть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "отмудохать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "отпиздить"
+classes = ["profanity"]
+
+[[traindata]]
+text = "отпиздячить"
+classes = ["profanity"]
+
+[[traindata]]
+text = "отпороть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "отъебись"
+classes = ["profanity"]
+
+[[traindata]]
+text = "охуевательский"
+classes = ["profanity"]
+
+[[traindata]]
+text = "охуевать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "охуевающий"
+classes = ["profanity"]
+
+[[traindata]]
+text = "охуел"
+classes = ["profanity"]
+
+[[traindata]]
+text = "охуенно"
+classes = ["profanity"]
+
+[[traindata]]
+text = "охуеньчик"
+classes = ["profanity"]
+
+[[traindata]]
+text = "охуеть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "охуительно"
+classes = ["profanity"]
+
+[[traindata]]
+text = "охуительный"
+classes = ["profanity"]
+
+[[traindata]]
+text = "охуяньчик"
+classes = ["profanity"]
+
+[[traindata]]
+text = "охуячивать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "охуячить"
+classes = ["profanity"]
+
+[[traindata]]
+text = "очкун"
+classes = ["profanity"]
+
+[[traindata]]
+text = "падла"
+classes = ["profanity"]
+
+[[traindata]]
+text = "падонки"
+classes = ["profanity"]
+
+[[traindata]]
+text = "падонок"
+classes = ["profanity"]
+
+[[traindata]]
+text = "паскуда"
+classes = ["profanity"]
+
+[[traindata]]
+text = "педерас"
+classes = ["profanity"]
+
+[[traindata]]
+text = "педик"
+classes = ["profanity"]
+
+[[traindata]]
+text = "педрик"
+classes = ["profanity"]
+
+[[traindata]]
+text = "педрила"
+classes = ["profanity"]
+
+[[traindata]]
+text = "педрилло"
+classes = ["profanity"]
+
+[[traindata]]
+text = "педрило"
+classes = ["profanity"]
+
+[[traindata]]
+text = "педрилы"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пездень"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пездит"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пездишь"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пездо"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пездят"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пердануть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пердеж"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пердение"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пердеть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пердильник"
+classes = ["profanity"]
+
+[[traindata]]
+text = "перднуть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пёрднуть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пердун"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пердунец"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пердунина"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пердунья"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пердуха"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пердь"
+classes = ["profanity"]
+
+[[traindata]]
+text = "переёбок"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пернуть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пёрнуть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пи3д"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пи3де"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пи3ду"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиzдец"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пидар"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пидарaс"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пидарас"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пидарасы"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пидары"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пидор"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пидорасы"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пидорка"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пидорок"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пидоры"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пидрас"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пизда"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздануть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздануться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздарваньчик"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздато"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздатое"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздатый"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пизденка"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пизденыш"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздёныш"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздеть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздец"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздит"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздить"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздиться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздишь"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздища"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздище"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздобол"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздоболы"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздобратия"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздоватая"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздоватый"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздолиз"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздонутые"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздорванец"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздорванка"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздострадатель"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пизду"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздуй"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздун"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздунья"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пизды"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздюга"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздюк"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздюлина"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздюля"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздят"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пиздячить"
+classes = ["profanity"]
+
+[[traindata]]
+text = "писбшки"
+classes = ["profanity"]
+
+[[traindata]]
+text = "писька"
+classes = ["profanity"]
+
+[[traindata]]
+text = "писькострадатель"
+classes = ["profanity"]
+
+[[traindata]]
+text = "писюн"
+classes = ["profanity"]
+
+[[traindata]]
+text = "писюшка"
+classes = ["profanity"]
+
+[[traindata]]
+text = "по хуй"
+classes = ["profanity"]
+
+[[traindata]]
+text = "по хую"
+classes = ["profanity"]
+
+[[traindata]]
+text = "подговнять"
+classes = ["profanity"]
+
+[[traindata]]
+text = "подонки"
+classes = ["profanity"]
+
+[[traindata]]
+text = "подонок"
+classes = ["profanity"]
+
+[[traindata]]
+text = "подъебнуть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "подъебнуться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "поебать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "поебень"
+classes = ["profanity"]
+
+[[traindata]]
+text = "поёбываает"
+classes = ["profanity"]
+
+[[traindata]]
+text = "поскуда"
+classes = ["profanity"]
+
+[[traindata]]
+text = "посрать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "потаскуха"
+classes = ["profanity"]
+
+[[traindata]]
+text = "потаскушка"
+classes = ["profanity"]
+
+[[traindata]]
+text = "похер"
+classes = ["profanity"]
+
+[[traindata]]
+text = "похерил"
+classes = ["profanity"]
+
+[[traindata]]
+text = "похерила"
+classes = ["profanity"]
+
+[[traindata]]
+text = "похерили"
+classes = ["profanity"]
+
+[[traindata]]
+text = "похеру"
+classes = ["profanity"]
+
+[[traindata]]
+text = "похрен"
+classes = ["profanity"]
+
+[[traindata]]
+text = "похрену"
+classes = ["profanity"]
+
+[[traindata]]
+text = "похуй"
+classes = ["profanity"]
+
+[[traindata]]
+text = "похуист"
+classes = ["profanity"]
+
+[[traindata]]
+text = "похуистка"
+classes = ["profanity"]
+
+[[traindata]]
+text = "похую"
+classes = ["profanity"]
+
+[[traindata]]
+text = "придурок"
+classes = ["profanity"]
+
+[[traindata]]
+text = "приебаться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "припиздень"
+classes = ["profanity"]
+
+[[traindata]]
+text = "припизднутый"
+classes = ["profanity"]
+
+[[traindata]]
+text = "припиздюлина"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пробзделся"
+classes = ["profanity"]
+
+[[traindata]]
+text = "проблядь"
+classes = ["profanity"]
+
+[[traindata]]
+text = "проеб"
+classes = ["profanity"]
+
+[[traindata]]
+text = "проебанка"
+classes = ["profanity"]
+
+[[traindata]]
+text = "проебать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "промандеть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "промудеть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пропизделся"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пропиздеть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "пропиздячить"
+classes = ["profanity"]
+
+[[traindata]]
+text = "раздолбай"
+classes = ["profanity"]
+
+[[traindata]]
+text = "разхуячить"
+classes = ["profanity"]
+
+[[traindata]]
+text = "разъеб"
+classes = ["profanity"]
+
+[[traindata]]
+text = "разъеба"
+classes = ["profanity"]
+
+[[traindata]]
+text = "разъебай"
+classes = ["profanity"]
+
+[[traindata]]
+text = "разъебать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "распиздай"
+classes = ["profanity"]
+
+[[traindata]]
+text = "распиздеться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "распиздяй"
+classes = ["profanity"]
+
+[[traindata]]
+text = "распиздяйство"
+classes = ["profanity"]
+
+[[traindata]]
+text = "распроеть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сволота"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сволочь"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сговнять"
+classes = ["profanity"]
+
+[[traindata]]
+text = "секель"
+classes = ["profanity"]
+
+[[traindata]]
+text = "серун"
+classes = ["profanity"]
+
+[[traindata]]
+text = "серька"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сестроеб"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сикель"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сила"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сирать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сирывать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "соси"
+classes = ["profanity"]
+
+[[traindata]]
+text = "спиздел"
+classes = ["profanity"]
+
+[[traindata]]
+text = "спиздеть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "спиздил"
+classes = ["profanity"]
+
+[[traindata]]
+text = "спиздила"
+classes = ["profanity"]
+
+[[traindata]]
+text = "спиздили"
+classes = ["profanity"]
+
+[[traindata]]
+text = "спиздит"
+classes = ["profanity"]
+
+[[traindata]]
+text = "спиздить"
+classes = ["profanity"]
+
+[[traindata]]
+text = "срака"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сраку"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сраный"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сранье"
+classes = ["profanity"]
+
+[[traindata]]
+text = "срать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "срун"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ссака"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ссышь"
+classes = ["profanity"]
+
+[[traindata]]
+text = "стерва"
+classes = ["profanity"]
+
+[[traindata]]
+text = "страхопиздище"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сука"
+classes = ["profanity"]
+
+[[traindata]]
+text = "суки"
+classes = ["profanity"]
+
+[[traindata]]
+text = "суходрочка"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сучара"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сучий"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сучка"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сучко"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сучонок"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сучье"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сцание"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сцать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сцука"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сцуки"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сцуконах"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сцуль"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сцыха"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сцышь"
+classes = ["profanity"]
+
+[[traindata]]
+text = "съебаться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "сыкун"
+classes = ["profanity"]
+
+[[traindata]]
+text = "трахае6"
+classes = ["profanity"]
+
+[[traindata]]
+text = "трахаеб"
+classes = ["profanity"]
+
+[[traindata]]
+text = "трахаёб"
+classes = ["profanity"]
+
+[[traindata]]
+text = "трахатель"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ублюдок"
+classes = ["profanity"]
+
+[[traindata]]
+text = "уебать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "уёбища"
+classes = ["profanity"]
+
+[[traindata]]
+text = "уебище"
+classes = ["profanity"]
+
+[[traindata]]
+text = "уёбище"
+classes = ["profanity"]
+
+[[traindata]]
+text = "уебищное"
+classes = ["profanity"]
+
+[[traindata]]
+text = "уёбищное"
+classes = ["profanity"]
+
+[[traindata]]
+text = "уебк"
+classes = ["profanity"]
+
+[[traindata]]
+text = "уебки"
+classes = ["profanity"]
+
+[[traindata]]
+text = "уёбки"
+classes = ["profanity"]
+
+[[traindata]]
+text = "уебок"
+classes = ["profanity"]
+
+[[traindata]]
+text = "уёбок"
+classes = ["profanity"]
+
+[[traindata]]
+text = "урюк"
+classes = ["profanity"]
+
+[[traindata]]
+text = "усраться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ушлепок"
+classes = ["profanity"]
+
+[[traindata]]
+text = "х_у_я_р_а"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хyё"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хyй"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хyйня"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хамло"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хер"
+classes = ["profanity"]
+
+[[traindata]]
+text = "херня"
+classes = ["profanity"]
+
+[[traindata]]
+text = "херовато"
+classes = ["profanity"]
+
+[[traindata]]
+text = "херовина"
+classes = ["profanity"]
+
+[[traindata]]
+text = "херовый"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хитровыебанный"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хитрожопый"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуeм"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуе"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуё"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуевато"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуёвенький"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуевина"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуево"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуевый"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуёвый"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуек"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуёк"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуел"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуем"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуенч"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуеныш"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуенький"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуеплет"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуеплёт"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуепромышленник"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуерик"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуерыло"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуесос"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуесоска"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуета"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуетень"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуею"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуи"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуй"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуйком"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуйло"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуйня"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуйрик"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуище"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуля"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хую"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуюл"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуя"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуяк"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуякать"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуякнуть"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуяра"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуясе"
+classes = ["profanity"]
+
+[[traindata]]
+text = "хуячить"
+classes = ["profanity"]
+
+[[traindata]]
+text = "целка"
+classes = ["profanity"]
+
+[[traindata]]
+text = "чмо"
+classes = ["profanity"]
+
+[[traindata]]
+text = "чмошник"
+classes = ["profanity"]
+
+[[traindata]]
+text = "чмырь"
+classes = ["profanity"]
+
+[[traindata]]
+text = "шалава"
+classes = ["profanity"]
+
+[[traindata]]
+text = "шалавой"
+classes = ["profanity"]
+
+[[traindata]]
+text = "шараёбиться"
+classes = ["profanity"]
+
+[[traindata]]
+text = "шлюха"
+classes = ["profanity"]
+
+[[traindata]]
+text = "шлюхой"
+classes = ["profanity"]
+
+[[traindata]]
+text = "шлюшка"
+classes = ["profanity"]
+
+[[traindata]]
+text = "ябывает"
+classes = ["profanity"]

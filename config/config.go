@@ -1,7 +1,6 @@
 package config
 
 import (
-	"fmt"
 	"sync"
 	"time"
 	"reflect"
@@ -25,7 +24,6 @@ const (
 // The main Scrabbler configuration
 type ScrabblerConfiguration struct {
 	sync.RWMutex
-	EntryPointList	[]*entrypoint.Entrypoint
 	// Main configuration
 	Debug			bool						`toml:"debug" short:"d" description:"Enable debug mode" export:"true"`
 	LogLevel		string						`toml:"log_level" short:"l" description:"Log level" export:"true"`
@@ -121,7 +119,6 @@ func (config *ScrabblerConfiguration) Load() {
 			config.Unlock()
 		}
 	}
-	fmt.Printf("%+v\n", config.EntryPointList)
 }
 
 // Check if field is empty

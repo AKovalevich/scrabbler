@@ -11,9 +11,17 @@ import (
 
 func (server *Server) configureMainHttpServer() {
 	s := http.NewServeMux()
-	s.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprint(w, "Welcome!\n")
-	})
+
+	for _, entrypoint := range server.mainConfiguration.EntryPoints {
+		log.Do.Info("TEST")
+		log.Do.Info(entrypoint.String())
+
+		entrypoint.Init()
+		routesList := entrypoint.RoutesList()
+		for _, route := range routesList {
+			s.HandleFunc(route.Path, route.Handler)
+		}
+	}
 	server.mainHttpServer = &http.Server{
 		Handler:      s,
 		Addr: server.mainConfiguration.ServerHost + ":" + strconv.Itoa(server.mainConfiguration.ServerPort),
